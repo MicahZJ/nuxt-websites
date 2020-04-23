@@ -1,18 +1,26 @@
 <template>
-  <div
-    v-swiper:swiper="swiperOption"
-    @mouseenter="stopSwiper"
-    @mouseleave="startSwiper"
-  >
-    <div class="swiper-wrapper">
-      <div v-for="(item, index) in dataImage" :key="index" class="swiper-slide">
-        <img :src="item.imgUrl" />
+  <div id="home-wrapper">
+    <nav-bar></nav-bar>
+    <div
+      v-swiper:swiper="swiperOption"
+      @mouseenter="stopSwiper"
+      @mouseleave="startSwiper"
+    >
+      <div class="swiper-wrapper">
+        <div
+          v-for="(item, index) in dataImage"
+          :key="index"
+          class="swiper-slide"
+        >
+          <img class="image-item" :src="item.imgUrl" />
+        </div>
       </div>
+      <div slot="pagination" class="swiper-pagination"></div>
     </div>
-    <div slot="pagination" class="swiper-pagination"></div>
   </div>
 </template>
 <script>
+import navBar from "../../components/nav_bar";
 export default {
   data() {
     return {
@@ -35,13 +43,19 @@ export default {
         lazy: {
           loadPrevNext: true
         },
+        direction: "vertical",
+        slidesPerView: 1,
         spaceBetween: 30,
+        mousewheel: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true
         }
       }
     };
+  },
+  components: {
+    navBar
   },
   beforeMount() {},
   swiper() {
@@ -58,3 +72,4 @@ export default {
   }
 };
 </script>
+<style scoped lang="stylus" src="./style.styl"></style>
