@@ -13,8 +13,12 @@
       <el-menu-item index="2" @click="$router.push({ name: 'home_page' })"
         >关于我们</el-menu-item
       >
-      <el-menu-item index="3">产品展示</el-menu-item>
-      <el-menu-item index="4">新闻中心</el-menu-item>
+      <el-menu-item index="3" @click="$router.push({ name: 'product_page' })"
+        >产品展示</el-menu-item
+      >
+      <el-menu-item index="4" @click="$router.push({ name: 'news_page' })"
+        >新闻中心</el-menu-item
+      >
       <el-menu-item index="5">工程案例</el-menu-item>
       <el-menu-item index="6">服务体系</el-menu-item>
       <el-menu-item index="7">人才招聘</el-menu-item>

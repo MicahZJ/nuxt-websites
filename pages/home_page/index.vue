@@ -2,6 +2,7 @@
   <div id="home-wrapper">
     <nav-bar></nav-bar>
     <div
+      class="swiper-container"
       v-swiper:swiper="swiperOption"
       @mouseenter="stopSwiper"
       @mouseleave="startSwiper"
@@ -37,7 +38,7 @@ export default {
       ],
       swiperOption: {
         autoplay: {
-          delay: 1500,
+          delay: 3000,
           disableOnInteraction: false
         },
         lazy: {
@@ -45,7 +46,7 @@ export default {
         },
         direction: "vertical",
         slidesPerView: 1,
-        spaceBetween: 30,
+        // spaceBetween: 30,
         mousewheel: true,
         pagination: {
           el: ".swiper-pagination",
