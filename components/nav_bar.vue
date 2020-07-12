@@ -10,7 +10,10 @@
       <el-menu-item index="1" @click="$router.push({ name: 'index' })"
         >首页</el-menu-item
       >
-      <el-menu-item index="2" @click="$router.push({ name: 'home_page' })"
+      <el-menu-item
+        v-if="false"
+        index="2"
+        @click="$router.push({ name: 'home_page' })"
         >关于我们</el-menu-item
       >
       <el-menu-item index="3" @click="$router.push({ name: 'product_page' })"
@@ -19,9 +22,17 @@
       <el-menu-item index="4" @click="$router.push({ name: 'news_page' })"
         >新闻中心</el-menu-item
       >
-      <el-menu-item index="5">工程案例</el-menu-item>
-      <el-menu-item index="6">服务体系</el-menu-item>
-      <el-menu-item index="7">人才招聘</el-menu-item>
+      <el-menu-item index="5" @click="$router.push({ name: 'example_page' })"
+        >工程案例</el-menu-item
+      >
+      <el-menu-item index="6" @click="$router.push({ name: 'company_page' })"
+        >走进顺兴</el-menu-item
+      >
+      <el-menu-item
+        index="7"
+        @click="$router.push({ name: 'recruitment_page' })"
+        >人才招聘</el-menu-item
+      >
     </el-menu>
   </div>
 </template>

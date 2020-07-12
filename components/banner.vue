@@ -2,7 +2,8 @@
   <div class="banner">
     <div class="mm"></div>
     <div class="banner-img">
-      <img src="../assets/images/bgtop.jpg" />
+      <img v-if="false" src="../assets/images/bg_product.jpg" />
+      <el-image :src="imageS" :fit="fit"></el-image>
     </div>
     <div class="banner-title">
       <p>{{ title }}</p>
@@ -18,18 +19,23 @@ export default {
       type: String,
       default: ""
     },
-    img: {
+    imageS: {
       type: String,
-      default: "../assets/img/bgtop.jpg"
+      default: ""
+    },
+    fit: {
+      type: String,
+      default: "cover"
     }
-  }
+  },
+  mounted() {}
 };
 </script>
 
 <style lang="scss" scoped>
 .banner {
   width: 100%;
-  height: 300px;
+  height: 400px;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -40,8 +46,8 @@ export default {
     height: 100%;
     padding: 10px;
     margin: -10px;
-    filter: blur(10px);
-    background-image: url(../assets/images/bgtop.jpg);
+    filter: blur(80px);
+    background-image: url(../assets/images/bg_product.jpg);
     background-position: center;
     background-size: 100%;
   }

@@ -23,13 +23,18 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["element-ui/lib/theme-chalk/index.css", "swiper/css/swiper.css"],
+  css: [
+    "element-ui/lib/theme-chalk/index.css",
+    "swiper/css/swiper.css",
+    "video.js/dist/video-js.css"
+  ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     { src: "@/plugins/element-ui", ssr: true },
-    { src: "@/plugins/vue_swiper.js", ssr: false }
+    { src: "@/plugins/vue_swiper.js", ssr: false },
+    { src: "@/plugins/video_player.js", ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
